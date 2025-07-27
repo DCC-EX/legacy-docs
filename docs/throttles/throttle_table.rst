@@ -191,7 +191,7 @@
       -  
       -  X
       -  
-      -  
+      -  X
 
     * -  :doc:`Train Throttle <software/train-throttle>`
       -  Free / Paid
@@ -248,6 +248,20 @@
       -  
       -  
       -  X
+
+    * -  :doc:`WiThrottle Cab <software/withrottle-cab>`
+      -  Paid
+      -  WiFi
+      -  Native
+      -  App
+      -  
+      -  
+      -  X
+      -  X
+      -  
+      -  
+      -  
+      -  
 
     * -  :doc:`DccExController <hardware/dccexcontroller>`
       -  Free

@@ -108,8 +108,12 @@ These are the most basic steps to get you up and running.  If you need more help
 
    **4. Connect Your Controller (Throttle) App to the 'dccex' Server**
 
-      * Launch your throttle app.
+      * Launch your throttle app. [3]_
       * In your throttle app, connect to the ``dccex`` server.
+
+      .. [3] |WiThrottle|, and some other apps, will require you to enter the IP address and port of the server manually.  
+         |BR| The IP address is usually ``192.168.4.1`` when using Access Point mode, and the port is ``2560``.  
+         |BR| Refer to your app's documentation for details on how to enter these settings.
 
    **5. Acquire a Loco in Your Controller (Throttle) App**
 
@@ -522,7 +526,7 @@ The |EX-CSB1| is set to operate in |DCC| mode by default. If you want to switch 
 Booster Mode
 --------------
 
-The |EX-CSB1| as the name implies can operate as a Command Station or a Booster. See [insert link] for instructions on how to use the EX-CSB1 as a booster.
+The |EX-CSB1| as the name implies can operate as a Command Station or a Booster. See :doc:`EX-CS as a booster page <rtr-booster>` for instructions on how to use the EX-CSB1 as a booster.
 
 |HR-DASHED|
 
