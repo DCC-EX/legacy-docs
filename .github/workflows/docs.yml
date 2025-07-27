@@ -1,0 +1,33 @@
+name: Docs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - name: Requirements
+        # Allow sphinx-rtd-theme to choose the versions of sphinx & docutils
+        run: |
+          pip3 install -r requirements.txt
+        # pip3 install sphinx-rtd-theme==1.2.0 \
+            # sphinx-sitemap sphinxcontrib-spelling sphinx-toolbox ablog sphinx-design
+      - name: Build docs
+        run: |
+          make github
+          echo 'dcc-ex.com' > docs/_build/html/CNAME
+          touch docs/_build/html/.nojekyll
+      - name: Deploy
+        if: github.ref == 'refs/heads/sphinx'
+        uses: JamesIves/github-pages-deploy-action@ba1486788b0490a235422264426c45848eac35c6  # v4.4.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages  # The branch the action should deploy to.
+          folder: docs/_build/html  # The folder the action should deploy.
